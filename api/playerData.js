@@ -5,7 +5,8 @@ const dbUrl = clientCredentials.databaseURL;
 
 // GET ALL THE PLAYERS BY UID
 const getPlayers = (uid) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/players.json?orderBy="uid"&equalTo="${uid}"`)
+  axios
+    .get(`${dbUrl}/players.json?orderBy="uid"&equalTo="${uid}"`)
     .then((response) => {
       if (response.data) {
         resolve(Object.values(response.data));
@@ -16,4 +17,19 @@ const getPlayers = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-export default getPlayers;
+// CREATE PLAYER
+const createPlayer = (newPlayerObj) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/players.json`, newPlayerObj)
+    .then((response) => {
+      const body = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/players/${response.data.name}`, body).then(() => {
+        getPlayers(newPlayerObj.uid).then(resolve);
+      });
+    })
+    .catch(reject);
+});
+
+export {
+  getPlayers,
+  createPlayer,
+};
