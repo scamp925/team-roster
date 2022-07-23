@@ -22,7 +22,7 @@ const createPlayer = (newPlayerObj) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/players.json`, newPlayerObj)
     .then((response) => {
       const body = { firebaseKey: response.data.name };
-      axios.patch(`${dbUrl}/players/${response.data.name}`, body).then(() => {
+      axios.patch(`${dbUrl}/players/${response.data.name}.json`, body).then(() => {
         getPlayers(newPlayerObj.uid).then(resolve);
       });
     })
