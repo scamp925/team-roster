@@ -17,6 +17,13 @@ const getPlayers = (uid) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// GET SINGLE PLAYER
+const getSinglePlayer = (firebaseKey) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/players/${firebaseKey}.json`)
+    .then((response) => resolve(response.data))
+    .catch(reject);
+});
+
 // CREATE PLAYER
 const createPlayer = (newPlayerObj) => new Promise((resolve, reject) => {
   axios.post(`${dbUrl}/players.json`, newPlayerObj)
@@ -29,7 +36,16 @@ const createPlayer = (newPlayerObj) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// UPDATE PLAYER
+const updatePlayer = (playerObj) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/players/${playerObj.firebaseKey}.json`, playerObj)
+    .then(resolve)
+    .catch(reject);
+});
+
 export {
   getPlayers,
+  getSinglePlayer,
   createPlayer,
+  updatePlayer,
 };
