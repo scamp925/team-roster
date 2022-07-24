@@ -23,7 +23,7 @@ function Home() {
       </header>
       <div>
         {players.map((player) => (
-          <PlayerCards key={player.firebaseKey} playerObj={player} />
+          <PlayerCards key={player.firebaseKey} playerObj={player} onUpdate={getTeamRoster} />
         ))}
       </div>
     </div>
