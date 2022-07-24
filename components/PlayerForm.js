@@ -5,7 +5,7 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../utils/context/authContext';
-import { createPlayer } from '../api/playerData';
+import { createPlayer, updatePlayer } from '../api/playerData';
 
 const initialState = {
   imageUrl: '',
@@ -32,11 +32,15 @@ function PlayerForm({ obj }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    const payload = { ...formInput, uid: user.uid };
-    createPlayer(payload).then(() => {
-      router.push('/team');
-    });
+    if (obj.firebaseKey) {
+      updatePlayer(formInput)
+        .then(() => router.push('/team'));
+    } else {
+      const payload = { ...formInput, uid: user.uid };
+      createPlayer(payload).then(() => {
+        router.push('/team');
+      });
+    }
   };
 
   return (

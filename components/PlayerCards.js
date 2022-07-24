@@ -12,7 +12,7 @@ function PlayerCards({ playerObj }) {
           <Card.Title>{playerObj.name}</Card.Title>
           <Card.Text>{playerObj.position}</Card.Text>
           <Card.Text>#{playerObj.jerseyNumber}</Card.Text>
-          <Link href={`/edit/${playerObj.firebaseKey}`} passHref>
+          <Link href={`/${playerObj.firebaseKey}`} passHref>
             <Button variant="info">Edit</Button>
           </Link>
           <Button variant="danger">Delete</Button>
