@@ -41,16 +41,18 @@ a {
 
 .display-name {
   margin-top: 13px;
-  margin-left: 30px;
+  margin-left: 90px;
+  min-width: 16%;
   font-size: x-large;
 }
 
 .sign-out-btn {
-  margin-right: 30px;
+  margin-right: 50px;
 }
 
 .navbar-container {
-  margin-left: 32%;
+  width: 31%;
+  margin: auto;
 }
 
 header {

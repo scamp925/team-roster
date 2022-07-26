@@ -28,10 +28,10 @@ export default function NavBar() {
             </Link>
           </Nav>
         </Navbar.Collapse>
-        <Button variant="danger" className="sign-out-btn" onClick={signOut}>
-          Sign Out
-        </Button>
       </Container>
+      <Button variant="danger" className="sign-out-btn" onClick={signOut}>
+        Sign Out
+      </Button>
     </Navbar>
   );
 }
