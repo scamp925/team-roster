@@ -1,11 +1,12 @@
 @import 'bootstrap/dist/css/bootstrap.css';
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap');
 
 html,
 body {
+  background-image: linear-gradient(to right, green, white, red );
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Lora', serif;
 }
 
 a {
@@ -17,7 +18,7 @@ a {
   box-sizing: border-box;
 }
 
-.signIn {
+.sign-in {
   background-image: url('https://w0.peakpx.com/wallpaper/478/925/HD-wallpaper-soccer-under-the-lights-soccer-grass-goal-lights-sport-net-football-stadium-score-field.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -34,6 +35,67 @@ a {
   font-size: xxx-large;
 }
 
-.signInBtn {
+.sign-in-btn {
   margin-top: 15px;
+}
+
+.display-name {
+  margin-top: 13px;
+  margin-left: 90px;
+  min-width: 16%;
+  font-size: x-large;
+}
+
+.sign-out-btn {
+  margin-right: 50px;
+}
+
+.navbar-container {
+  width: 31%;
+  margin: auto;
+}
+
+header {
+  margin: 35px;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/* PLAYER DETAILS DISPLAY */
+.card-body {
+  display: flex;
+}
+
+.flex-child {
+  flex: 0;
+}
+
+.flex-child:first-child {
+  margin-left: 20px;
+  margin-right: 15px;
+  font-size: xxx-large;
+  font-weight: bold;
+}
+
+.name-and-position {
+  margin-top: 15px;
+  min-width: 58%;
+}
+
+footer {
+  margin: 20px 0px 15px 80px;
+}
+
+footer .edit-btn {
+  margin-right: 10px;
+}
+
+/* ADD A PLAYER FORM */
+.form-btn {
+  float: right;
 }

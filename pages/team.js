@@ -21,7 +21,7 @@ export default function TeamRoster() {
       <header>
         <h1>Team</h1>
       </header>
-      <div>
+      <div className="cards-container">
         {players.map((player) => (
           <PlayerCards key={player.firebaseKey} playerObj={player} onUpdate={getTeamRoster} />
         ))}

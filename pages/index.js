@@ -21,7 +21,7 @@ function Home() {
       <header>
         <h1>Benvenuto! </h1>
       </header>
-      <div>
+      <div className="cards-container">
         {players.map((player) => (
           <PlayerCards key={player.firebaseKey} playerObj={player} onUpdate={getTeamRoster} />
         ))}
