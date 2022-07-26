@@ -4,18 +4,11 @@ import { signIn } from '../utils/auth';
 
 function Signin() {
   return (
-    <div
-      className="text-center d-flex flex-column justify-content-center align-content-center"
-      style={{
-        height: '90vh',
-        padding: '30px',
-        maxWidth: '400px',
-        margin: '0 auto',
-      }}
-    >
-      <h1>Hi there!</h1>
-      <p>Click the button below to login!</p>
-      <Button type="button" variant="success" size="lg" className="copy-btn" onClick={signIn}>
+    <div className="signIn">
+      <h2 className="goal">GOOOOOAAAALLLL!!</h2>
+      <h1>You made it to Team Roster!</h1>
+      <h6>Click the button below to get started</h6>
+      <Button type="button" variant="success" size="lg" className="signInBtn" onClick={signIn}>
         Sign In
       </Button>
     </div>

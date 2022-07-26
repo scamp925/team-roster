@@ -17,6 +17,23 @@ a {
   box-sizing: border-box;
 }
 
-body {
-  background-color: #88effd;
+.signIn {
+  background-image: url('https://w0.peakpx.com/wallpaper/478/925/HD-wallpaper-soccer-under-the-lights-soccer-grass-goal-lights-sport-net-football-stadium-score-field.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.goal {
+  font-size: xxx-large;
+}
+
+.signInBtn {
+  margin-top: 15px;
 }
