@@ -16,14 +16,20 @@ function PlayerCards({ playerObj, onUpdate }) {
       <Card style={{ width: '18rem', margin: '10px' }}>
         <Card.Img variant="top" src={playerObj.imageUrl} alt={playerObj.name} />
         <Card.Body>
-          <Card.Title>{playerObj.name}</Card.Title>
-          <Card.Text>{playerObj.position}</Card.Text>
-          <Card.Text>#{playerObj.jerseyNumber}</Card.Text>
+          <section className="flex-child">
+            <Card.Text>#{playerObj.jerseyNumber}</Card.Text>
+          </section>
+          <section className="flex-child name-and-position">
+            <Card.Title>{playerObj.name}</Card.Title>
+            <Card.Text>{playerObj.position}</Card.Text>
+          </section>
+        </Card.Body>
+        <footer>
           <Link href={`/${playerObj.firebaseKey}`} passHref>
-            <Button variant="info">Edit</Button>
+            <Button variant="info" className="edit-btn">Edit</Button>
           </Link>
           <Button variant="danger" onClick={deleteThisPlayer}>Delete</Button>
-        </Card.Body>
+        </footer>
       </Card>
     </div>
   );
