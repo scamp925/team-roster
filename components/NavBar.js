@@ -11,7 +11,8 @@ export default function NavBar() {
   const { user } = useAuth();
   return (
     <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-      <Container>
+      <p className="displayName">Ciao, {user.displayName}!</p>
+      <Container className="navbarContainer">
         <Link passHref href="/">
           <Navbar.Brand>HOME</Navbar.Brand>
         </Link>
@@ -25,10 +26,11 @@ export default function NavBar() {
             <Link passHref href="/new">
               <Nav.Link>ADD A PLAYER</Nav.Link>
             </Link>
-            <p>Ciao, {user.displayName}!</p>
-            <Button variant="danger" onClick={signOut}>Sign Out</Button>
           </Nav>
         </Navbar.Collapse>
+        <Button variant="danger" className="signOutBtn" onClick={signOut}>
+          Sign Out
+        </Button>
       </Container>
     </Navbar>
   );
