@@ -2,6 +2,7 @@
 
 html,
 body {
+  background-image: linear-gradient(to right, green, white, red );
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
