@@ -91,4 +91,8 @@ footer {
 footer .edit-btn {
   margin-right: 10px;
 }
+
 /* ADD A PLAYER FORM */
+.form-btn {
+  float: right;
+}
