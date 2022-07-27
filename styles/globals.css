@@ -18,6 +18,7 @@ a {
   box-sizing: border-box;
 }
 
+/* SIGN IN PAGE */
 .sign-in {
   background-image: url('https://w0.peakpx.com/wallpaper/478/925/HD-wallpaper-soccer-under-the-lights-soccer-grass-goal-lights-sport-net-football-stadium-score-field.jpg');
   background-position: center;
@@ -39,6 +40,7 @@ a {
   margin-top: 15px;
 }
 
+/* NAVBAR */
 .display-name {
   margin-top: 13px;
   margin-left: 90px;
@@ -46,15 +48,16 @@ a {
   font-size: x-large;
 }
 
-.sign-out-btn {
-  margin-right: 50px;
-}
-
 .navbar-container {
   width: 31%;
   margin: auto;
 }
 
+.sign-out-btn {
+  margin-right: 50px;
+}
+
+/* PAGES THAT RENDER CARDS */
 header {
   margin: 35px;
   text-align: center;
