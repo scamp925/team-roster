@@ -28,7 +28,7 @@ export default function TeamRoster() {
         <Search players={players} setFilteredPlayers={setFilteredPlayers} />
       </header>
       <div className="cards-container">
-        {filteredPlayers.map((player) => (
+        {filteredPlayers?.map((player) => (
           <PlayerCards key={player.firebaseKey} playerObj={player} onUpdate={getTeamRoster} />
         ))}
       </div>
