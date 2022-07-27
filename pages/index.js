@@ -9,7 +9,9 @@ function Home() {
   const { user } = useAuth();
 
   const getTeamRoster = () => {
-    getPlayers(user.uid).then(setPlayers);
+    getPlayers(user.uid).then((playersArray) => {
+      setPlayers(playersArray);
+    });
   };
 
   useEffect(() => {
