@@ -10,7 +10,7 @@ function Search({ players, setFilteredPlayers }) {
   const handleChange = (e) => {
     const { value } = e.target;
     setSearchInput(value);
-    const results = players.filter((player) => player.name.toLowerCase().includes(value.toLowerCase()));
+    const results = players.filter((player) => player.name.toLowerCase().includes(value.toLowerCase()) || player.position.toLowerCase().includes(value.toLowerCase()));
     setFilteredPlayers(results);
   };
 
@@ -23,8 +23,8 @@ function Search({ players, setFilteredPlayers }) {
     <div>
       <InputGroup className="mb-3">
         <Form.Control
-          placeholder="Search Player by Name"
-          aria-label="Search Player by Name"
+          placeholder="Search Players by Name or Position"
+          aria-label="Search Players by Name or Position"
           value={searchInput}
           onChange={handleChange}
           aria-describedby="basic-addon2"
@@ -33,8 +33,6 @@ function Search({ players, setFilteredPlayers }) {
           Reset Search
         </Button>
       </InputGroup>
-      {/* <input placeholder="Search Player by Name" value={searchInput} onChange={handleChange} /> */}
-
     </div>
   );
 }
